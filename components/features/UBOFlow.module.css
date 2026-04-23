@@ -37,8 +37,8 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 8px var(--success);
+  background: var(--text-secondary);
+  box-shadow: 0 0 8px rgba(161, 161, 170, 0.3);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -137,7 +137,7 @@
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-sm) var(--space-md);
-  background: rgba(20, 20, 22, 0.95);
+  background: var(--surface-elevated);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);

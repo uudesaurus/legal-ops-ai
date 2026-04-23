@@ -1,22 +1,12 @@
 .sidebar {
-  position: fixed;
-  top: 56px;
-  left: 0;
-  bottom: 0;
-  width: 280px;
-  background: rgba(15, 15, 17, 0.9);
+  height: 100%;
+  background: var(--topbar-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--topbar-border);
   display: flex;
   flex-direction: column;
-  z-index: 50;
-  transition: width var(--transition-smooth);
   animation: fadeInLeft 600ms ease forwards;
-}
-
-.collapsed {
-  width: 64px;
 }
 
 .header {
@@ -102,14 +92,14 @@
 }
 
 .historyItem.active .itemIcon {
-  color: var(--success);
+  color: var(--text-secondary);
 }
 
 .processingDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--warning);
+  background: var(--text-muted);
   animation: pulse 1.5s ease-in-out infinite;
 }
 
@@ -194,6 +184,8 @@
   color: var(--text-tertiary);
   transition: color var(--transition-fast);
   text-decoration: none;
+  display: block;
+  padding: 2px 0;
 }
 
 .footerLink:hover {
@@ -215,8 +207,17 @@
   background: var(--border);
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes staggerFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }

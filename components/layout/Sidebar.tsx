@@ -110,7 +110,7 @@ export function Sidebar({ collapsed }: SidebarProps) {
           <div className={styles.version}>
             <span>v0.1.0</span>
             <span className={styles.versionDot} />
-            <span>Legal Ops AI</span>
+            <span>KARNA Dashboard</span>
           </div>
         </div>
       )}

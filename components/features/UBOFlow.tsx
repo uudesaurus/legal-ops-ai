@@ -58,7 +58,7 @@ export function UBOFlow() {
                 transition={{ delay: 0.1, duration: 0.5 }}
               >
                 <span className={styles.eyebrowDot} />
-                Legal Ops AI
+                KARNA Dashboard
               </motion.div>
 
               <motion.h1
