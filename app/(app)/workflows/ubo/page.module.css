@@ -332,13 +332,13 @@
 
 /* Matter Header */
 .matterHeader {
-  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
   border-bottom: 1px solid var(--border-subtle);
   background: var(--topbar-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   position: sticky;
-  top: 56px;
+  top: calc(56px + 40px);
   z-index: 10;
 }
 
@@ -440,12 +440,9 @@
 .tabs {
   display: flex;
   gap: 4px;
-  padding: var(--space-lg) var(--space-xl);
+  padding: var(--space-md) var(--space-xl);
   background: var(--bg);
   border-bottom: 1px solid var(--border-subtle);
-  position: sticky;
-  top: calc(56px + 120px);
-  z-index: 9;
 }
 
 .tab {

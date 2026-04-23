@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#192B4E" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ClerkProvider>{children}</ClerkProvider>
       </body>
     </html>

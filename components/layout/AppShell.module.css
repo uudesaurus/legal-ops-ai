@@ -8,13 +8,13 @@
 .main {
   display: flex;
   flex: 1;
-  padding-top: 56px;
+  padding-top: calc(56px + 40px);
 }
 
 /* Desktop sidebar wrapper — always rendered, hidden on mobile */
 .desktopSidebar {
   position: fixed;
-  top: 56px;
+  top: calc(56px + 40px);
   left: 0;
   bottom: 0;
   width: 260px;

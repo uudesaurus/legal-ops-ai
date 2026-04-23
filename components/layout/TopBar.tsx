@@ -55,9 +55,8 @@ export function TopBar({ collapsed, onToggleSidebar }: TopBarProps) {
         </div>
       </div>
 
-      {/* Right: KARNA + Theme toggle */}
+      {/* Right: Theme toggle */}
       <div className={styles.right}>
-        <KarnaLogo />
         <div className={styles.divider} />
 
         {/* Notification bell */}
@@ -93,14 +92,6 @@ export function TopBar({ collapsed, onToggleSidebar }: TopBarProps) {
         <span className={styles.roleBadge}>Admin</span>
       </div>
     </header>
-  );
-}
-
-function KarnaLogo() {
-  return (
-    <div className={styles.karnaLogo}>
-      <span className={styles.karnaName}>KARNA</span>
-    </div>
   );
 }
 

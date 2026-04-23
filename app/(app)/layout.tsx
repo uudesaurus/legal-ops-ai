@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { auth } from '@clerk/nextjs/server';
 import { AppShell } from '@/components/layout/AppShell';
+import { TrialBanner } from '@/components/layout/TrialBanner';
 import { ToastProvider } from '@/contexts/ToastContext';
 import { ToastContainer } from '@/components/features/Toast';
 
@@ -17,6 +18,7 @@ export default async function AppLayout({
 
   return (
     <ToastProvider>
+      <TrialBanner />
       <AppShell>{children}</AppShell>
       <ToastContainer />
     </ToastProvider>

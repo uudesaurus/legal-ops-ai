@@ -182,7 +182,7 @@
 .workflowGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
+  gap: 20px;
 }
 
 /* ── Activity Card ── */
