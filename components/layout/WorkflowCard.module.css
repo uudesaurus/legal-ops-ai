@@ -77,19 +77,19 @@
 
 @keyframes borderRotate {
   0% {
-    background: linear-gradient(0deg, transparent, var(--accent-warm), transparent);
+    background: linear-gradient(0deg, transparent, var(--text-tertiary), transparent);
   }
   25% {
-    background: linear-gradient(90deg, transparent, var(--accent-cool), transparent);
+    background: linear-gradient(90deg, transparent, var(--text-secondary), transparent);
   }
   50% {
-    background: linear-gradient(180deg, transparent, var(--accent-warm), transparent);
+    background: linear-gradient(180deg, transparent, var(--text-tertiary), transparent);
   }
   75% {
-    background: linear-gradient(270deg, transparent, var(--accent-cool), transparent);
+    background: linear-gradient(270deg, transparent, var(--text-secondary), transparent);
   }
   100% {
-    background: linear-gradient(360deg, transparent, var(--accent-warm), transparent);
+    background: linear-gradient(360deg, transparent, var(--text-tertiary), transparent);
   }
 }
 

@@ -39,10 +39,10 @@
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-sm) var(--space-lg);
-  background: var(--accent-warm);
-  border: 1px solid rgba(254, 243, 199, 0.2);
+  background: var(--text-primary);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  color: var(--bg);
+  color: var(--text-inverse);
   font-size: 13px;
   font-family: var(--font-body);
   font-weight: 700;
@@ -136,8 +136,8 @@
 }
 
 .statCardWarm {
-  border-color: rgba(254, 243, 199, 0.2);
-  background: linear-gradient(135deg, rgba(254, 243, 199, 0.03) 0%, var(--surface) 100%);
+  border-color: rgba(180, 180, 200, 0.2);
+  background: linear-gradient(135deg, rgba(180, 180, 200, 0.03) 0%, var(--surface) 100%);
 }
 
 .statCardSuccess {
@@ -158,7 +158,7 @@
   line-height: 1;
 }
 
-.statCardWarm .statValue { color: var(--accent-warm); }
+.statCardWarm .statValue { color: var(--text-secondary); }
 .statCardSuccess .statValue { color: var(--success); }
 .statCardWarning .statValue { color: var(--warning); }
 
@@ -403,14 +403,14 @@
 }
 
 .roleBadgeAdmin {
-  color: var(--accent-warm);
-  background: rgba(254, 243, 199, 0.08);
-  border-color: rgba(254, 243, 199, 0.15);
+  color: var(--text-secondary);
+  background: rgba(180, 180, 200, 0.08);
+  border-color: rgba(180, 180, 200, 0.15);
 }
 
 .roleBadgeAdmin:hover {
-  background: rgba(254, 243, 199, 0.12);
-  border-color: rgba(254, 243, 199, 0.25);
+  background: rgba(180, 180, 200, 0.12);
+  border-color: rgba(180, 180, 200, 0.25);
 }
 
 .roleBadgeUser {
@@ -457,7 +457,7 @@
 }
 
 .roleOptionActive {
-  color: var(--accent-warm);
+  color: var(--text-secondary);
 }
 
 /* Status */
@@ -617,14 +617,14 @@
 }
 
 .pageNumberActive {
-  background: var(--accent-warm);
-  color: var(--bg);
+  background: var(--text-primary);
+  color: var(--text-inverse);
   font-weight: 700;
 }
 
 .pageNumberActive:hover {
-  background: var(--accent-warm);
-  color: var(--bg);
+  background: var(--text-secondary);
+  color: var(--text-inverse);
 }
 
 /* Empty State */
