@@ -453,7 +453,7 @@
 }
 
 [data-theme="dark"] .submitBtn:hover {
-  background: #fde68a;
+  background: var(--text-primary);
 }
 
 .modalSuccess {

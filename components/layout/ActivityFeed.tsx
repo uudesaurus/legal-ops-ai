@@ -123,13 +123,13 @@ const actionIconMap: Record<ActivityAction, React.ReactNode> = {
 };
 
 const actionColorMap: Record<ActivityAction, string> = {
-  upload: 'var(--accent-warm)',
+  upload: 'var(--text-secondary)',
   report: 'var(--success)',
   matter_create: 'var(--accent-cool)',
-  workflow_start: 'var(--accent-warm)',
+  workflow_start: 'var(--text-secondary)',
   system: 'var(--info)',
   review: 'var(--success)',
-  analysis: 'var(--accent-warm)',
+  analysis: 'var(--text-secondary)',
   invite: 'var(--warning)',
   export: 'var(--text-tertiary)',
   share: 'var(--accent-cool)',

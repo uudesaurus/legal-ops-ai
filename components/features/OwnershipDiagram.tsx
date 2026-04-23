@@ -47,7 +47,7 @@ export function OwnershipDiagram() {
       <motion.g initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}>
         <rect x="295" y="30" width="210" height="60" rx="8" fill="var(--surface-elevated)" stroke="var(--border-focus)" strokeWidth="1.5" />
-        <circle cx="499" cy="60" r="4" fill="var(--accent-warm)" opacity="0.7" />
+        <circle cx="499" cy="60" r="4" fill="var(--text-secondary)" opacity="0.7" />
         <text x="400" y="53" textAnchor="middle" fill="var(--text-primary)" fontSize="11" fontFamily="Space Mono, monospace" fontWeight="600">PT EKACITTA DIAN PERTIWI</text>
         <text x="400" y="70" textAnchor="middle" fill="var(--text-muted)" fontSize="9" fontFamily="Space Mono, monospace" letterSpacing="0.05em">TARGET COMPANY</text>
       </motion.g>

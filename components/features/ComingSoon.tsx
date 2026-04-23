@@ -223,8 +223,8 @@ export function ComingSoon({
 
               <div className={styles.modalIcon}>
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M4 8h24v16H4z" stroke="var(--accent-warm)" strokeWidth="1.2" rx="2" />
-                  <path d="M4 8l12 10 12-10" stroke="var(--accent-warm)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M4 8h24v16H4z" stroke="var(--text-secondary)" strokeWidth="1.2" rx="2" />
+                  <path d="M4 8l12 10 12-10" stroke="var(--text-secondary)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
 
@@ -308,15 +308,15 @@ function WorkflowIcon({ type }: { type: ComingSoonProps['workflowIcon'] }) {
           {/* Main building */}
           <rect x="16" y="20" width="24" height="36" rx="2" stroke="var(--text-primary)" strokeWidth="1.5" fill="var(--surface-elevated)" />
           {/* Windows grid */}
-          <rect x="20" y="24" width="4" height="4" rx="0.5" fill="var(--accent-warm)" opacity="0.8" />
-          <rect x="28" y="24" width="4" height="4" rx="0.5" fill="var(--accent-warm)" opacity="0.6" />
+          <rect x="20" y="24" width="4" height="4" rx="0.5" fill="var(--text-secondary)" opacity="0.8" />
+          <rect x="28" y="24" width="4" height="4" rx="0.5" fill="var(--text-secondary)" opacity="0.6" />
           <rect x="36" y="24" width="4" height="4" rx="0.5" fill="var(--border)" />
           <rect x="20" y="32" width="4" height="4" rx="0.5" fill="var(--border)" />
-          <rect x="28" y="32" width="4" height="4" rx="0.5" fill="var(--accent-warm)" opacity="0.7" />
-          <rect x="36" y="32" width="4" height="4" rx="0.5" fill="var(--accent-warm)" opacity="0.5" />
-          <rect x="20" y="40" width="4" height="4" rx="0.5" fill="var(--accent-warm)" opacity="0.4" />
+          <rect x="28" y="32" width="4" height="4" rx="0.5" fill="var(--text-secondary)" opacity="0.7" />
+          <rect x="36" y="32" width="4" height="4" rx="0.5" fill="var(--text-secondary)" opacity="0.5" />
+          <rect x="20" y="40" width="4" height="4" rx="0.5" fill="var(--text-secondary)" opacity="0.4" />
           <rect x="28" y="40" width="4" height="4" rx="0.5" fill="var(--border)" />
-          <rect x="36" y="40" width="4" height="4" rx="0.5" fill="var(--accent-warm)" opacity="0.6" />
+          <rect x="36" y="40" width="4" height="4" rx="0.5" fill="var(--text-secondary)" opacity="0.6" />
           {/* Tree structure lines */}
           <path d="M8 56v-8" stroke="var(--text-muted)" strokeWidth="1" strokeLinecap="round" />
           <path d="M8 48L16 40" stroke="var(--text-muted)" strokeWidth="1" strokeLinecap="round" />

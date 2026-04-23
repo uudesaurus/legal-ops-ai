@@ -24,7 +24,7 @@ function CascadeIcon() {
       <path d="M16 37H32" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
 
       {/* Connection dots */}
-      <circle cx="20" cy="28" r="2" fill="var(--accent-warm)" opacity="0.8" />
+      <circle cx="20" cy="28" r="2" fill="var(--text-secondary)" opacity="0.8" />
       <circle cx="28" cy="28" r="2" fill="var(--accent-cool)" opacity="0.6" />
     </svg>
   );

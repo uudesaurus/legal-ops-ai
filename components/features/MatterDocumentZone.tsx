@@ -163,7 +163,7 @@ export function MatterDocumentZone({ documents: initialDocs, onDocumentsChange, 
         onDragOver={handleDragOver}
         onDrop={handleDrop}
         animate={{
-          borderColor: isDragging ? 'rgba(254, 243, 199, 0.4)' : 'rgba(39, 39, 42, 0.6)',
+          borderColor: isDragging ? 'rgba(180, 180, 200, 0.4)' : 'rgba(39, 39, 42, 0.6)',
           backgroundColor: isDragging ? 'rgba(20, 20, 22, 0.9)' : 'rgba(15, 15, 17, 0.4)',
           scale: isDragging ? 1.005 : 1,
         }}
@@ -186,7 +186,7 @@ export function MatterDocumentZone({ documents: initialDocs, onDocumentsChange, 
           <div className={styles.dropIcon}>
             {isDragging ? (
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M16 8v12M12 16l4 4 4-4" stroke="var(--accent-warm)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M16 8v12M12 16l4 4 4-4" stroke="var(--text-secondary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M8 24v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
               </svg>
             ) : (

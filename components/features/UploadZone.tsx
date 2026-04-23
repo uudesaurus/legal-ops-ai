@@ -445,7 +445,7 @@ function DropIcon({ isDragging }: { isDragging: boolean }) {
       >
         <path
           d="M24 38v-10M20 30l4 4 4-4"
-          stroke="var(--accent-warm)"
+          stroke="var(--text-secondary)"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"

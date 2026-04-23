@@ -251,7 +251,7 @@ function RoleCard({
             transition={{ type: 'spring', stiffness: 500, damping: 30 }}
           >
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <circle cx="6" cy="6" r="5" fill="var(--accent-warm)" />
+              <circle cx="6" cy="6" r="5" fill="var(--text-secondary)" />
               <path d="M3.5 6l2 2 3-3" stroke="var(--bg)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </motion.span>
