@@ -33,7 +33,12 @@ export function AppShell({ children }: AppShellProps) {
   if (!mounted) {
     return (
       <div className={styles.shellLoading}>
-        <div className={styles.loadingOrb} />
+        <div className={styles.loadingDots}>
+          <div className={styles.loadingDot} />
+          <div className={styles.loadingDot} />
+          <div className={styles.loadingDot} />
+        </div>
+        <span className={styles.loadingText}>Loading</span>
       </div>
     );
   }

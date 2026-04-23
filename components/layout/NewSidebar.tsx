@@ -14,7 +14,7 @@ function KarnaLogoMark() {
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
       <rect width="28" height="28" rx="6" fill="var(--surface)" />
       <rect x="0.5" y="0.5" width="27" height="27" rx="5.5" stroke="var(--border)" />
-      <text x="14" y="19" textAnchor="middle" fill="var(--text-primary)" fontSize="13" fontFamily="Space Mono, monospace" fontWeight="700">K</text>
+      <text x="14" y="19" textAnchor="middle" fill="var(--accent-warm)" fontSize="13" fontFamily="DM Sans, sans-serif" fontWeight="700" letterSpacing="0.05em">K</text>
     </svg>
   );
 }

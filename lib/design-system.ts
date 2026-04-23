@@ -1,5 +1,5 @@
-// Design tokens for the UBO Analyzer
-// Monochrome Fog Bureau — YC + Anthropic meets Tokyo law firm terminal
+// Design tokens for the Legal Ops Agent
+// KARNA — YC + Anthropic meets Tokyo law firm terminal
 
 export const tokens = {
   colors: {
@@ -26,8 +26,8 @@ export const tokens = {
 
     // Accent — fogbow prismatic edge
     accent: '#e4e4e7',
-    accentWarm: '#fef3c7',  // subtle amber edge of fogbow
-    accentCool: '#dbeafe',  // subtle blue edge
+    accentWarm: '#fef3c7',  // subtle amber edge of fogbow (dark mode)
+    accentCool: '#dbeafe',  // subtle blue edge (dark mode)
     accentMuted: '#3f3f46',
 
     // Status
@@ -49,10 +49,10 @@ export const tokens = {
   },
 
   fonts: {
-    display: "'Instrument Serif', Georgia, serif",
-    body: "'Geist', 'Geist Mono', 'Space Mono', monospace",
-    mono: "'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace",
-    accent: "'Instrument Serif', Georgia, serif",
+    display: "'EB Garamond', Georgia, serif",
+    body: "'DM Sans', -apple-system, sans-serif",
+    mono: "'DM Sans', -apple-system, sans-serif",
+    accent: "'EB Garamond', Georgia, serif",
   },
 
   spacing: {
@@ -113,8 +113,6 @@ export const animations = {
   pulse: 'pulse 2s ease-in-out infinite',
   shimmer: 'shimmer 2s ease-in-out infinite',
   float: 'float 6s ease-in-out infinite',
-  fogDrift: 'fogDrift 20s ease-in-out infinite',
-  fogPulse: 'fogPulse 8s ease-in-out infinite',
   spin: 'spin 8s linear infinite',
   crystallize: 'crystallize 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
   dissolve: 'dissolve 0.8s ease forwards',

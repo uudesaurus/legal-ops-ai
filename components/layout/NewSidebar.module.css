@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
+  background: linear-gradient(90deg, transparent, var(--border-hover), transparent);
   opacity: 0.3;
 }
 
@@ -65,7 +65,7 @@
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.15em;
-  color: var(--text-primary);
+  color: var(--accent-warm);
   line-height: 1.2;
 }
 
@@ -183,7 +183,6 @@
   height: 20px;
   background: var(--accent-warm);
   border-radius: 0 2px 2px 0;
-  box-shadow: 0 0 8px var(--accent-warm);
 }
 
 .navItemComingSoon {

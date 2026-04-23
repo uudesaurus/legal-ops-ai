@@ -33,7 +33,7 @@
   pointer-events: none;
   background: radial-gradient(
     ellipse 60% 60% at 50% 40%,
-    rgba(254, 243, 199, 0.03) 0%,
+    rgba(180, 180, 200, 0.03) 0%,
     transparent 70%
   );
 }
@@ -50,7 +50,7 @@
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: var(--accent-warm);
+  background: var(--text-secondary);
   animation: particleFloat linear infinite;
 }
 
@@ -111,9 +111,7 @@
   padding: var(--space-2xl) var(--space-3xl);
   position: relative;
   overflow: hidden;
-  box-shadow:
-    var(--shadow-lg),
-    0 0 80px rgba(254, 243, 199, 0.03);
+  box-shadow: var(--shadow-lg);
 }
 
 .cardGlow {
@@ -125,8 +123,8 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--accent-warm) 30%,
-    var(--accent-warm) 70%,
+    var(--border-hover) 30%,
+    var(--border-hover) 70%,
     transparent 100%
   );
   opacity: 0.4;
@@ -138,7 +136,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: var(--space-lg);
-  filter: drop-shadow(0 0 20px rgba(254, 243, 199, 0.08));
 }
 
 /* ── Badge ── */
@@ -148,14 +145,14 @@
   align-items: center;
   gap: var(--space-xs);
   padding: 4px var(--space-sm);
-  background: rgba(254, 243, 199, 0.08);
-  border: 1px solid rgba(254, 243, 199, 0.15);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
   border-radius: var(--radius-full);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-warm);
+  color: var(--text-secondary);
   margin: 0 auto var(--space-lg);
 }
 
@@ -163,7 +160,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent-warm);
+  background: var(--text-secondary);
   animation: badgePulse 2s ease-in-out infinite;
 }
 
@@ -261,7 +258,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent-warm);
+  background: var(--text-secondary);
   opacity: 0.6;
 }
 
@@ -277,7 +274,7 @@
   align-items: center;
   gap: var(--space-sm);
   padding: 10px var(--space-xl);
-  background: var(--accent-warm);
+  background: var(--text-secondary);
   color: var(--text-inverse);
   border: none;
   border-radius: var(--radius-lg);
@@ -290,9 +287,9 @@
 }
 
 .notifyBtn:hover {
-  background: #fde68a;
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(254, 243, 199, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  opacity: 0.9;
 }
 
 .notifyBtn:active {
@@ -435,12 +432,12 @@
 }
 
 .emailInput:focus {
-  border-color: var(--accent-warm);
+  border-color: var(--border-focus);
 }
 
 .submitBtn {
   padding: 10px var(--space-xl);
-  background: var(--accent-warm);
+  background: var(--text-secondary);
   color: var(--text-inverse);
   border-radius: var(--radius-md);
   font-family: var(--font-body);
@@ -451,8 +448,12 @@
 }
 
 .submitBtn:hover {
-  background: #fde68a;
+  background: var(--text-secondary);
   transform: translateY(-1px);
+}
+
+[data-theme="dark"] .submitBtn:hover {
+  background: #fde68a;
 }
 
 .modalSuccess {

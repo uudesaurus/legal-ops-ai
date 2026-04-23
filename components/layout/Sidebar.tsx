@@ -73,7 +73,7 @@ export function Sidebar({ collapsed }: SidebarProps) {
                 <path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-            <span className={styles.navLabel}>UBO Analyzer</span>
+            <span className={styles.navLabel}>Legal Ops Agent</span>
           </a>
         </div>
 

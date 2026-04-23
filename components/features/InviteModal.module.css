@@ -173,9 +173,9 @@
 }
 
 .roleCardSelected {
-  border-color: var(--accent-warm);
-  background: rgba(254, 243, 199, 0.05);
-  box-shadow: 0 0 0 1px var(--accent-warm);
+  border-color: var(--text-secondary);
+  background: rgba(180, 180, 200, 0.05);
+  box-shadow: 0 0 0 1px var(--text-secondary);
 }
 
 .roleCardHeader {
@@ -191,7 +191,7 @@
 }
 
 .roleCardSelected .roleIcon {
-  color: var(--accent-warm);
+  color: var(--text-secondary);
 }
 
 .roleTitle {
@@ -249,22 +249,28 @@
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-sm) var(--space-lg);
-  background: var(--accent-warm);
-  border: 1px solid rgba(254, 243, 199, 0.2);
+  background: var(--text-primary);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  color: var(--bg);
+  color: var(--text-inverse);
   font-size: 13px;
   font-family: var(--font-body);
   font-weight: 700;
   transition: all var(--transition-normal);
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(254, 243, 199, 0.1);
+}
+
+[data-theme="dark"] .submitBtn {
+  box-shadow: 0 0 20px rgba(250, 250, 250, 0.05);
 }
 
 .submitBtn:hover:not(:disabled) {
-  background: #fef9e7;
-  box-shadow: 0 0 30px rgba(254, 243, 199, 0.2);
+  background: var(--text-secondary);
   transform: translateY(-1px);
+}
+
+[data-theme="dark"] .submitBtn:hover:not(:disabled) {
+  box-shadow: 0 0 30px rgba(250, 250, 250, 0.08);
 }
 
 .submitBtn:disabled {

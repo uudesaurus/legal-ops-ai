@@ -1,6 +1,6 @@
-# UBO Analyzer — Frontend Prototype
+# Legal Ops Agent — Frontend Prototype
 
-**Design**: Monochrome Fog Bureau — YC + Anthropic aesthetic with ambient fog animations.
+**Design**: KARNA — YC + Anthropic aesthetic with ambient fog animations.
 **Framework**: Next.js 16 + App Router + TypeScript + Framer Motion
 **Styling**: CSS Modules (no Tailwind)
 

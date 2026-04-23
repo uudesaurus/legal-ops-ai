@@ -6,6 +6,7 @@ import { UploadZone } from './UploadZone';
 import { ProcessingState } from './ProcessingState';
 import { UBOReport } from './UBOReport';
 import { EmptyState } from './EmptyState';
+import { ArchitectureDiagram } from './ArchitectureDiagram';
 import styles from './UBOFlow.module.css';
 
 type FlowState = 'idle' | 'uploading' | 'processing' | 'report' | 'error';
@@ -117,6 +118,15 @@ export function UBOFlow() {
                   </div>
                 ))}
               </div>
+            </motion.div>
+
+            {/* Architecture Diagram */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+            >
+              <ArchitectureDiagram />
             </motion.div>
 
             {/* Recent empty state for past analyses */}

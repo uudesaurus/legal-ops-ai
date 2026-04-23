@@ -6,7 +6,7 @@
 .page {
   position: relative;
   min-height: 100vh;
-  padding: 0 var(--space-xl) var(--space-xl);
+  padding: var(--space-xl) var(--space-xl) var(--space-xl);
   overflow: hidden;
 }
 
@@ -130,7 +130,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .sectionTitleGroup {
@@ -243,7 +243,7 @@
 
 @media (max-width: 768px) {
   .page {
-    padding: 0 var(--space-md) var(--space-lg);
+    padding: var(--space-lg) var(--space-md) var(--space-lg);
   }
 
   .title {

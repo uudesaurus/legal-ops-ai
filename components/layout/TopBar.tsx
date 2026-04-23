@@ -45,10 +45,12 @@ export function TopBar({ collapsed, onToggleSidebar }: TopBarProps) {
         </button>
 
         <div className={styles.logo}>
-          <LogoMark />
+          <div className={styles.karnaLogo}>
+            <span className={styles.karnaName}>KARNA</span>
+          </div>
           <div className={styles.logoText}>
-            <span className={styles.logoMain}>UBO</span>
-            <span className={styles.logoSub}>Analyzer</span>
+            <span className={styles.logoMain}>Legal Ops</span>
+            <span className={styles.logoSub}>Agent</span>
           </div>
         </div>
       </div>
@@ -94,24 +96,9 @@ export function TopBar({ collapsed, onToggleSidebar }: TopBarProps) {
   );
 }
 
-function LogoMark() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className={styles.logoMark}>
-      <rect width="28" height="28" rx="6" fill="var(--surface-elevated)" />
-      <rect x="1" y="1" width="26" height="26" rx="5" stroke="var(--border)" strokeWidth="1" />
-      <path d="M7 9h14M7 14h10M7 19h12" stroke="var(--text-primary)" strokeWidth="1.3" strokeLinecap="round" />
-      <circle cx="22" cy="16" r="2.5" fill="var(--accent-warm)" opacity="0.8" />
-    </svg>
-  );
-}
-
 function KarnaLogo() {
   return (
     <div className={styles.karnaLogo}>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={styles.karnaMark}>
-        <rect width="24" height="24" rx="5" fill="var(--surface)" stroke="var(--border)" strokeWidth="1" />
-        <text x="12" y="16" textAnchor="middle" fill="var(--text-primary)" fontSize="10" fontFamily="Space Mono, monospace" fontWeight="700" letterSpacing="0.5">K</text>
-      </svg>
       <span className={styles.karnaName}>KARNA</span>
     </div>
   );

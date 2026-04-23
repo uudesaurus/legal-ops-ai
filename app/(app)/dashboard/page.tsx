@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import styles from './page.module.css';
 import { WorkflowCard } from '@/components/layout/WorkflowCard';
 import { ActivityFeed } from '@/components/layout/ActivityFeed';
+import { PlatformMetrics } from '@/components/features/PlatformMetrics';
 import { mockWorkflows, mockActivities } from '@/lib/mock-data';
 
 export default function DashboardPage() {
@@ -40,6 +41,16 @@ export default function DashboardPage() {
           </div>
         </div>
       </motion.header>
+
+      {/* ── Platform Metrics ── */}
+      <motion.section
+        className={styles.section}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <PlatformMetrics />
+      </motion.section>
 
       {/* ── Section 1: Workflow Hub ── */}
       <section className={styles.section}>

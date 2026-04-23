@@ -1,5 +1,5 @@
 /**
- * UBO ANALYZER — API CONTRACT
+ * Legal Ops Agent — API CONTRACT
  * For Backend Engineers
  *
  * This file defines the complete API contract between the frontend and backend.

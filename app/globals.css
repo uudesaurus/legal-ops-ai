@@ -1,9 +1,9 @@
 /* ================================================
-   UBO ANALYZER — MONOCHROME FOG BUREAU
-   Design System & Global Styles
+   KARNA Legal Ops Agent — Design System
+   Global Styles
    ================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ---- DESIGN TOKENS ---- */
 
@@ -56,7 +56,7 @@
   --fog-base: #18181b;
   --fog-glow: rgba(250, 250, 250, 0.03);
   --fog-edge: rgba(254, 243, 199, 0.06);
-  --fog-mist: rgba(180, 180, 200, 0.04);
+  --fog-mist: rgba(254, 243, 199, 0.04);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -91,22 +91,22 @@
 
   /* Text */
   --text-primary: #09090b;
-  --text-secondary: #52525b;
-  --text-tertiary: #71717a;
-  --text-muted: #a1a1aa;
-  --text-inverse: #09090b;
+  --text-secondary: #3f3f46;
+  --text-tertiary: #52525b;
+  --text-muted: #71717a;
+  --text-inverse: #fafafa;
 
-  /* Accent */
+  /* Accent — navy, not brown */
   --accent: #18181b;
-  --accent-warm: #92400e;
+  --accent-warm: #192B4E;
   --accent-cool: #1e3a8a;
   --accent-muted: #d4d4d8;
 
   /* Status */
-  --success: #16a34a;
-  --warning: #d97706;
-  --error: #dc2626;
-  --info: #2563eb;
+  --success: #15803d;
+  --warning: #b45309;
+  --error: #b91c1c;
+  --info: #1d4ed8;
 
   /* UBO Status */
   --ubo-main: #09090b;
@@ -115,18 +115,18 @@
 
   /* Fog effect — lighter in light mode */
   --fog-base: #fafafa;
-  --fog-glow: rgba(100, 100, 100, 0.03);
-  --fog-edge: rgba(146, 64, 14, 0.04);
-  --fog-mist: rgba(30, 58, 138, 0.03);
+  --fog-glow: rgba(180, 180, 200, 0.08);
+  --fog-edge: rgba(180, 140, 100, 0.08);
+  --fog-mist: rgba(30, 58, 138, 0.06);
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 40px rgba(146, 64, 14, 0.04);
-  --shadow-glow-warm: 0 0 60px rgba(146, 64, 14, 0.06);
-  --shadow-glow-accent: 0 0 80px rgba(30, 58, 138, 0.04);
+  /* Shadows — lighter, professional */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.09);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 40px rgba(25, 43, 78, 0.04);
+  --shadow-glow-warm: 0 0 60px rgba(25, 43, 78, 0.06);
+  --shadow-glow-accent: 0 0 80px rgba(25, 43, 78, 0.04);
 
   color-scheme: light;
 }
@@ -134,9 +134,9 @@
 /* Shared tokens (no theme variation) */
 :root {
   /* Typography */
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-body: 'Space Mono', 'JetBrains Mono', 'Fira Code', monospace;
-  --font-mono: 'Space Mono', 'JetBrains Mono', 'Fira Code', monospace;
+  --font-display: 'EB Garamond', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --font-mono: 'DM Sans', -apple-system, sans-serif;
 
   /* Spacing */
   --space-xs: 4px;
@@ -259,44 +259,6 @@ svg text {
    ANIMATIONS
    ================================================ */
 
-/* Ambient fog drift */
-@keyframes fogDrift {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.4;
-  }
-  33% {
-    transform: translate(30px, -20px) scale(1.05);
-    opacity: 0.6;
-  }
-  66% {
-    transform: translate(-20px, 15px) scale(0.97);
-    opacity: 0.5;
-  }
-}
-
-@keyframes fogDriftAlt {
-  0%, 100% {
-    transform: translate(0, 0) scale(1.1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translate(-40px, 25px) scale(1);
-    opacity: 0.5;
-  }
-}
-
-@keyframes fogPulse {
-  0%, 100% {
-    opacity: 0.15;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.25;
-    transform: scale(1.08);
-  }
-}
-
 /* Page entrance animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -358,25 +320,15 @@ svg text {
   }
 }
 
-/* Crystallize — report materialization */
+/* Crystallize — report materialization (lighter, faster) */
 @keyframes crystallize {
   0% {
     opacity: 0;
-    transform: scale(0.92) translateY(24px);
-    filter: blur(8px);
-  }
-  40% {
-    opacity: 0.6;
-    filter: blur(4px);
-  }
-  70% {
-    opacity: 0.85;
-    filter: blur(1px);
+    transform: scale(0.96) translateY(16px);
   }
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
-    filter: blur(0);
   }
 }
 
@@ -552,7 +504,7 @@ svg text {
   top: -200px;
   left: -100px;
   background: radial-gradient(circle, var(--fog-edge) 0%, transparent 70%);
-  animation: fogDrift 25s ease-in-out infinite;
+  animation: fadeIn 3s ease-out forwards;
 }
 
 .fog-orb-2 {
@@ -561,7 +513,7 @@ svg text {
   bottom: -150px;
   right: -50px;
   background: radial-gradient(circle, var(--fog-mist) 0%, transparent 70%);
-  animation: fogDriftAlt 30s ease-in-out infinite;
+  animation: fadeIn 4s ease-out 0.5s forwards;
 }
 
 .fog-orb-3 {
@@ -571,5 +523,5 @@ svg text {
   left: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, var(--fog-glow) 0%, transparent 70%);
-  animation: fogPulse 12s ease-in-out infinite;
+  animation: fadeIn 5s ease-out 1s forwards;
 }

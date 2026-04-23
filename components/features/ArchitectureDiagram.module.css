@@ -1,0 +1,86 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ArchitectureDiagram — KARNA Legal Ops
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--space-md);
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--success);
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.diagramContainer {
+  width: 100%;
+  overflow-x: auto;
+  padding: var(--space-sm) 0;
+}
+
+/* Mermaid SVG overrides — inherit theme variables */
+.diagramContainer :global(svg) {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.diagramContainer :global(.node) {
+  transition: filter 0.2s ease;
+}
+
+.diagramContainer :global(.node:hover) {
+  filter: brightness(1.15);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}

@@ -1,39 +1,17 @@
 "use client";
 
-'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import styles from './admin-layout.module.css';
 
-// Admin sub-navigation
 const adminNav = [
-  {
-    label: 'Users',
-    href: '/admin/users',
-    badge: null,
-    comingSoon: false,
-  },
-  {
-    label: 'Settings',
-    href: '/settings',
-    badge: null,
-    comingSoon: false,
-  },
-  {
-    label: 'Audit Log',
-    href: '/admin/audit',
-    badge: 'Soon',
-    comingSoon: true,
-  },
+  { label: 'Users', href: '/admin/users', badge: null, comingSoon: false },
+  { label: 'Settings', href: '/settings', badge: null, comingSoon: false },
+  { label: 'Audit Log', href: '/admin/audit', badge: 'Soon', comingSoon: true },
 ];
 
-export default function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
@@ -86,10 +64,10 @@ export default function AdminLayout({
         </div>
       </aside>
 
-      {/* Main content area */}
-      <main className={styles.main}>
+      {/* Content — no nested main, just a div */}
+      <div className={styles.content}>
         {children}
-      </main>
+      </div>
     </div>
   );
 }

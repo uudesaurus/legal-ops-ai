@@ -30,6 +30,10 @@
 .cardActive:hover {
   border-color: var(--border-hover);
   background: var(--surface-elevated);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .cardActive:hover {
   box-shadow: var(--shadow-lg), 0 0 40px rgba(254, 243, 199, 0.04);
 }
 
@@ -53,7 +57,7 @@
   background: linear-gradient(
     135deg,
     transparent 0%,
-    var(--accent-warm) 30%,
+    var(--border-hover) 30%,
     var(--accent-cool) 60%,
     transparent 100%
   );
@@ -98,7 +102,10 @@
 
 .cardActive:hover .iconWrapper {
   color: var(--text-primary);
-  filter: drop-shadow(0 0 8px rgba(254, 243, 199, 0.2));
+}
+
+[data-theme="dark"] .cardActive:hover .iconWrapper {
+  filter: drop-shadow(0 0 8px rgba(250, 250, 250, 0.1));
 }
 
 /* ── Content ── */
@@ -154,8 +161,8 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--success);
-  background: rgba(74, 222, 128, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  background: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.15);
   padding: 3px 8px;
   border-radius: var(--radius-full);
 }
@@ -165,8 +172,18 @@
   height: 5px;
   border-radius: 50%;
   background: var(--success);
-  box-shadow: 0 0 6px var(--success);
+  box-shadow: 0 0 4px rgba(22, 163, 74, 0.4);
   animation: activePulse 2s ease-in-out infinite;
+}
+
+[data-theme="dark"] .activeBadge {
+  background: rgba(74, 222, 128, 0.1);
+  border-color: rgba(74, 222, 128, 0.2);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .activeDot {
+  box-shadow: 0 0 6px var(--success);
 }
 
 .comingSoonBadge {

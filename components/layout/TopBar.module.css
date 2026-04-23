@@ -46,7 +46,6 @@
 
 .logoMark {
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(254, 243, 199, 0.1));
 }
 
 .logoText {
@@ -93,16 +92,13 @@
   border-radius: var(--radius-md);
 }
 
-.karnaMark {
-  flex-shrink: 0;
-}
-
 .karnaName {
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: var(--text-primary);
+  color: var(--accent-warm);
   text-transform: uppercase;
+  font-family: var(--font-mono);
 }
 
 @keyframes fadeInDown {
@@ -144,7 +140,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 3px;
-  box-shadow: 0 0 6px rgba(248, 113, 113, 0.5);
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.4);
 }
 
 /* User button wrapper */

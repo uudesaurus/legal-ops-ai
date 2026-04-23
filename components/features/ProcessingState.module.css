@@ -228,8 +228,8 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--accent-warm);
-  box-shadow: 0 0 6px var(--accent-warm);
+  background: var(--text-secondary);
+  box-shadow: 0 0 6px var(--text-secondary);
 }
 
 @keyframes processingPulse {

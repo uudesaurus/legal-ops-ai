@@ -520,3 +520,65 @@ export function getWorkflowById(id: string): Workflow | undefined {
 export function getMatterById(id: string): Matter | undefined {
   return mockMatters.find((m) => m.id === id);
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PLATFORM METRICS (for Dashboard)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface PlatformMetric {
+  id: string;
+  label: string;
+  value: string | number;
+  icon: string;
+  trend?: number;
+  sublabel?: string;
+}
+
+export const platformMetrics: PlatformMetric[] = [
+  {
+    id: 'docs-processed',
+    label: 'Documents Processed',
+    value: 127,
+    icon: 'documents',
+    trend: 12,
+    sublabel: 'This month',
+  },
+  {
+    id: 'ubo-analyses',
+    label: 'UBO Analyses',
+    value: 43,
+    icon: 'analyses',
+    trend: 8,
+    sublabel: 'All time',
+  },
+  {
+    id: 'active-matters',
+    label: 'Active Matters',
+    value: 12,
+    icon: 'matters',
+    sublabel: '3 need review',
+  },
+  {
+    id: 'reports-generated',
+    label: 'Reports Generated',
+    value: 89,
+    icon: 'reports',
+    trend: 23,
+    sublabel: 'This quarter',
+  },
+  {
+    id: 'team-members',
+    label: 'Team Members',
+    value: 8,
+    icon: 'team',
+    sublabel: '2 pending invite',
+  },
+  {
+    id: 'avg-processing',
+    label: 'Avg. Processing Time',
+    value: '3.2s',
+    icon: 'time',
+    trend: -15,
+    sublabel: 'Per document',
+  },
+];
