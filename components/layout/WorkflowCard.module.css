@@ -1,0 +1,233 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   WorkflowCard — KARNA Legal Ops Dashboard
+   Premium workflow hub card with gradient border animation
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.cardLink {
+  text-decoration: none;
+  display: block;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  height: 280px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+/* Active card */
+.cardActive {
+  cursor: pointer;
+}
+
+.cardActive:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(254, 243, 199, 0.04);
+}
+
+/* Coming soon card */
+.cardComingSoon {
+  opacity: 0.6;
+  cursor: default;
+  border-style: dashed;
+}
+
+.cardMore {
+  cursor: default;
+}
+
+/* Gradient border glow effect */
+.borderGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    var(--accent-warm) 30%,
+    var(--accent-cool) 60%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.cardActive:hover .borderGlow {
+  opacity: 0.5;
+  animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+  0% {
+    background: linear-gradient(0deg, transparent, var(--accent-warm), transparent);
+  }
+  25% {
+    background: linear-gradient(90deg, transparent, var(--accent-cool), transparent);
+  }
+  50% {
+    background: linear-gradient(180deg, transparent, var(--accent-warm), transparent);
+  }
+  75% {
+    background: linear-gradient(270deg, transparent, var(--accent-cool), transparent);
+  }
+  100% {
+    background: linear-gradient(360deg, transparent, var(--accent-warm), transparent);
+  }
+}
+
+/* ── Icon ── */
+.iconWrapper {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.cardActive:hover .iconWrapper {
+  color: var(--text-primary);
+  filter: drop-shadow(0 0 8px rgba(254, 243, 199, 0.2));
+}
+
+/* ── Content ── */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.description {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardComingSoon .description {
+  font-style: italic;
+}
+
+/* ── Footer / Status ── */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.activeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--success);
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.activeDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 6px var(--success);
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+.comingSoonBadge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.note {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* ── Arrow (hover reveal) ── */
+.arrowWrapper {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-normal);
+  color: var(--text-tertiary);
+}
+
+.cardActive:hover .arrowWrapper {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.arrow {
+  transition: transform var(--transition-normal);
+}
+
+.cardActive:hover .arrow {
+  transform: translateX(2px);
+}
+
+/* ── Animations ── */
+@keyframes activePulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 4px var(--success);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 8px var(--success);
+  }
+}

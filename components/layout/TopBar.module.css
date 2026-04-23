@@ -117,6 +117,7 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-md);
+  position: relative;
   color: var(--text-tertiary);
   transition: all var(--transition-normal);
 }
@@ -124,6 +125,45 @@
 .iconBtn:hover {
   color: var(--text-primary);
   background: var(--surface);
+}
+
+/* Notification badge */
+.notificationBadge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--error);
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  box-shadow: 0 0 6px rgba(248, 113, 113, 0.5);
+}
+
+/* User button wrapper */
+.userButtonWrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Role badge */
+.roleBadge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--warning);
+  border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 @keyframes fadeInDown {

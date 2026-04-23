@@ -1,0 +1,275 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dashboard — KARNA Legal Ops
+   Premium command-center layout with workflow hub + activity feed
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 var(--space-xl) var(--space-xl);
+  overflow: hidden;
+}
+
+/* ── Background pattern ── */
+.bgGrid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 70%);
+}
+
+.bgGradient {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-30%);
+  width: 800px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(254, 243, 199, 0.04) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Page Header ── */
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.headerContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin: 0;
+  max-width: 420px;
+}
+
+/* ── Clock / Meta ── */
+.headerMeta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.clockLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.clockTime {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.clockDate {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+/* ── Sections ── */
+.section {
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--space-2xl);
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--space-md);
+}
+
+.sectionTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.sectionCount {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.sectionCountActive {
+  color: var(--success);
+}
+
+.sectionCountSeparator {
+  color: var(--text-muted);
+  margin: 0 1px;
+}
+
+.sectionCountTotal {
+  color: var(--text-muted);
+}
+
+.sectionSubtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Workflow Grid ── */
+.workflowGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ── Activity Card ── */
+.activityCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  min-height: 300px;
+}
+
+.activityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--success);
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.activityDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 6px var(--success);
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+/* ── Bottom spacer ── */
+.bottomSpacer {
+  height: var(--space-3xl);
+}
+
+/* ── Animations ── */
+@keyframes livePulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 6px var(--success);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 12px var(--success);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .workflowGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 0 var(--space-md) var(--space-lg);
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clock {
+    align-items: flex-start;
+  }
+
+  .workflowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .activityCard {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflowGrid {
+    gap: 12px;
+  }
+}

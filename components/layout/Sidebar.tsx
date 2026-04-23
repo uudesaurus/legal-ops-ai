@@ -42,7 +42,7 @@ export function Sidebar({ collapsed }: SidebarProps) {
     <aside className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}>
       <div className={styles.header}>
         {!collapsed && (
-          <span className={styles.headerLabel}>Analyses</span>
+          <span className={styles.headerLabel}>Navigation</span>
         )}
         <button className={styles.newBtn} aria-label="New analysis">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -53,6 +53,30 @@ export function Sidebar({ collapsed }: SidebarProps) {
       </div>
 
       <nav className={styles.nav}>
+        {/* Workflow nav */}
+        <div className={styles.navSection}>
+          <a href="/" className={`${styles.navItem} ${activeId === 'dashboard' ? styles.active : ''}`} onClick={() => setActiveId('dashboard')}>
+            <span className={styles.navIcon}>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1" />
+                <rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1" />
+                <rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1" />
+                <rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1" />
+              </svg>
+            </span>
+            <span className={styles.navLabel}>Dashboard</span>
+          </a>
+          <a href="/ubo" className={`${styles.navItem} ${activeId === 'ubo' ? styles.active : ''}`} onClick={() => setActiveId('ubo')}>
+            <span className={styles.navIcon}>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7 2L2 4.5v4c0 3 2.5 5.5 5 7 2.5-1.5 5-4 5-7v-4L7 2z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+                <path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <span className={styles.navLabel}>UBO Analyzer</span>
+          </a>
+        </div>
+
         {!collapsed ? (
           <div className={styles.list}>
             {mockHistory.map((item, i) => (

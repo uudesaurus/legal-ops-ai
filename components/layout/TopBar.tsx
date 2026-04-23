@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { UserButton } from '@clerk/nextjs';
 import styles from './TopBar.module.css';
 
 interface TopBarProps {
@@ -56,6 +57,16 @@ export function TopBar({ collapsed, onToggleSidebar }: TopBarProps) {
       <div className={styles.right}>
         <KarnaLogo />
         <div className={styles.divider} />
+
+        {/* Notification bell */}
+        <button className={styles.iconBtn} aria-label="Notifications" title="Notifications">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2C6.9 2 6 2.9 6 4V4.29L4.7 5.59C4.09 6.21 3.75 7.02 3.75 7.88V10.5C3.75 11.88 4.87 13 6.25 13H9.75C11.13 13 12.25 11.88 12.25 10.5V7.88C12.25 7.02 11.91 6.21 11.3 5.59L10 4.29V4C10 2.9 9.1 2 8 2Z" stroke="currentColor" strokeWidth="1.2" />
+            <path d="M7 13C7 13.55 7.45 14 8 14C8.55 14 9 13.55 9 13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+          </svg>
+          <span className={styles.notificationBadge}>3</span>
+        </button>
+
         <button
           className={styles.iconBtn}
           onClick={toggleTheme}
@@ -64,17 +75,20 @@ export function TopBar({ collapsed, onToggleSidebar }: TopBarProps) {
         >
           {mounted && (darkMode ? <SunIcon /> : <MoonIcon />)}
         </button>
-        <button className={styles.iconBtn} aria-label="Settings">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8" r="2.5" stroke="currentColor" strokeWidth="1.2" />
-            <path
-              d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41"
-              stroke="currentColor"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </button>
+
+        {/* UserButton */}
+        <div className={styles.userButtonWrapper}>
+          <UserButton
+            appearance={{
+              elements: {
+                userButtonAvatarBox: { width: '28px', height: '28px' },
+              },
+            }}
+          />
+        </div>
+
+        {/* Role badge */}
+        <span className={styles.roleBadge}>Admin</span>
       </div>
     </header>
   );

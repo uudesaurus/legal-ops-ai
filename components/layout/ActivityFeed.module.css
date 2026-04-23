@@ -1,0 +1,183 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ActivityFeed — KARNA Legal Ops Dashboard
+   Timeline-style activity feed with animated entrance
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Activity Item ── */
+.item {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 0;
+}
+
+.item:last-child .timelineLine {
+  display: none;
+}
+
+/* ── Timeline left (dot + line) ── */
+.timelineLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.timelineDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineLine {
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+  margin: 4px 0;
+  min-height: 12px;
+}
+
+/* ── Item content ── */
+.itemContent {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 0 20px;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* ── Avatar ── */
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* ── Text content ── */
+.text {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.userName {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.actionText {
+  color: var(--text-secondary);
+}
+
+.meta {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ── Time ── */
+.time {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ── View All ── */
+.viewAll {
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-tertiary);
+  transition: all var(--transition-normal);
+  padding: 8px 0;
+}
+
+.viewAllBtn:hover {
+  color: var(--text-primary);
+}
+
+.viewAllBtn svg {
+  transition: transform var(--transition-normal);
+}
+
+.viewAllBtn:hover svg {
+  transform: translateX(2px);
+}
+
+/* ── Empty State ── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  opacity: 0.5;
+  animation: emptyPulse 4s ease-in-out infinite;
+}
+
+.emptyTitle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.emptyHint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  max-width: 280px;
+}
+
+@keyframes emptyPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}

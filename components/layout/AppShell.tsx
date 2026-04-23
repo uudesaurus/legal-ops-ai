@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Sidebar } from './Sidebar';
+import { NewSidebar } from './NewSidebar';
 import { TopBar } from './TopBar';
 import { FogLayers } from './FogLayers';
+import { ToastProvider } from '@/contexts/ToastContext';
+import { Toast } from '@/components/features/Toast';
 import styles from './AppShell.module.css';
 
 interface AppShellProps {
@@ -40,6 +42,9 @@ export function AppShell({ children }: AppShellProps) {
     <div className={styles.shell}>
       <FogLayers />
       <div className={styles.grainOverlay} aria-hidden="true" />
+      <ToastProvider>
+        <Toast />
+      </ToastProvider>
 
       <TopBar
         collapsed={sidebarCollapsed}
@@ -55,7 +60,10 @@ export function AppShell({ children }: AppShellProps) {
       <div className={styles.main}>
         {/* Desktop sidebar */}
         <div className={`${styles.desktopSidebar} ${sidebarCollapsed ? styles.sidebarCollapsed : ''}`}>
-          <Sidebar collapsed={sidebarCollapsed} />
+          <NewSidebar
+            collapsed={sidebarCollapsed}
+            onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+          />
         </div>
 
         {/* Mobile overlay */}
@@ -68,7 +76,10 @@ export function AppShell({ children }: AppShellProps) {
 
         {/* Mobile sidebar drawer */}
         <div className={`${styles.mobileSidebar} ${mobileSidebarOpen ? styles.mobileSidebarOpen : ''}`}>
-          <Sidebar collapsed={false} />
+          <NewSidebar
+            collapsed={false}
+            onToggle={() => setMobileSidebarOpen(false)}
+          />
         </div>
 
         <main className={`${styles.content} ${sidebarCollapsed ? styles.contentExpanded : ''}`}>

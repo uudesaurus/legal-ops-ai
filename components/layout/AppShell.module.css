@@ -17,19 +17,19 @@
   top: 56px;
   left: 0;
   bottom: 0;
-  width: 280px;
+  width: 260px;
   z-index: 50;
   transition: transform var(--transition-smooth);
 }
 
 .desktopSidebar.sidebarCollapsed {
-  transform: translateX(-216px);
+  transform: translateX(-196px);
 }
 
 /* Main content */
 .content {
   flex: 1;
-  margin-left: 280px;
+  margin-left: 260px;
   min-height: calc(100vh - 56px);
   position: relative;
   z-index: 1;
@@ -57,7 +57,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 280px;
+  width: 260px;
   z-index: 70;
   transform: translateX(-100%);
   transition: transform var(--transition-smooth);
