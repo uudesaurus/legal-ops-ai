@@ -32,7 +32,7 @@
   width: 800px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(254, 243, 199, 0.04) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(180, 180, 200, 0.04) 0%, transparent 70%);
   z-index: 0;
   pointer-events: none;
 }
@@ -182,7 +182,7 @@
 .workflowGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: var(--space-xl);
 }
 
 /* ── Activity Card ── */
@@ -190,7 +190,7 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
-  padding: 24px;
+  padding: var(--space-xl);
   min-height: 300px;
 }
 

@@ -403,11 +403,11 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: all var(--transition-normal);
-  box-shadow: 0 0 16px rgba(254, 243, 199, 0.15);
+  box-shadow: 0 0 16px rgba(180, 180, 200, 0.15);
 }
 
 .newAnalysisBtn:hover {
-  box-shadow: 0 0 24px rgba(254, 243, 199, 0.25);
+  box-shadow: 0 0 24px rgba(180, 180, 200, 0.25);
 }
 
 .menuBtn {
@@ -440,7 +440,7 @@
 .tabs {
   display: flex;
   gap: 4px;
-  padding: var(--space-md) var(--space-xl);
+  padding: var(--space-lg) var(--space-xl);
   background: var(--bg);
   border-bottom: 1px solid var(--border-subtle);
   position: sticky;
@@ -495,7 +495,7 @@
 
 /* Tab Content */
 .tabContent {
-  padding: var(--space-xl);
+  padding: var(--space-2xl);
 }
 
 .tabPanel {
@@ -560,8 +560,8 @@
 .analysisCard {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  padding: var(--space-lg);
+  gap: var(--space-md);
+  padding: var(--space-xl);
   background: var(--surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
@@ -578,7 +578,7 @@
   inset: 0;
   border-radius: inherit;
   opacity: 0;
-  background: radial-gradient(circle at top left, rgba(254, 243, 199, 0.03), transparent 60%);
+  background: radial-gradient(circle at top left, rgba(180, 180, 200, 0.03), transparent 60%);
   transition: opacity var(--transition-normal);
 }
 

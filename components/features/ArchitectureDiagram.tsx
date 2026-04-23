@@ -21,10 +21,10 @@ flowchart LR
 
     style A fill:#141416,stroke:#27272a,color:#fafafa
     style B fill:#1a1a1d,stroke:#52525b,color:#fafafa
-    style C fill:#1a1a1d,stroke:#52525b,color:#fef3c7
+    style C fill:#1a1a1d,stroke:#52525b,color:#d1d5db
     style D fill:#141416,stroke:#27272a,color:#fafafa
     style E fill:#141416,stroke:#27272a,color:#fafafa
-    style F fill:#1a1a1d,stroke:#fef3c7,color:#fef3c7
+    style F fill:#1a1a1d,stroke:#d1d5db,color:#d1d5db
     style G fill:#141416,stroke:#27272a,color:#dbeafe
     style H fill:#141416,stroke:#27272a,color:#fafafa
     style I fill:#141416,stroke:#27272a,color:#fafafa

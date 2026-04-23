@@ -32,7 +32,7 @@
   bottom: -150px;
   left: -50px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(254, 243, 199, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180, 180, 200, 0.04) 0%, transparent 70%);
   animation: driftAlt 25s ease-in-out infinite;
 }
 

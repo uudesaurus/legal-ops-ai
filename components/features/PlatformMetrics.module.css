@@ -9,17 +9,17 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  gap: var(--space-xl);
 }
 
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: var(--space-xl);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-md);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
 }

@@ -12,8 +12,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 28px;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
   height: 300px;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);

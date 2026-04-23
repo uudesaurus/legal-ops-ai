@@ -47,14 +47,14 @@
   font-family: var(--font-body);
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(254, 243, 199, 0.1);
+  box-shadow: 0 0 20px rgba(180, 180, 200, 0.1);
   transition: box-shadow var(--transition-normal);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .inviteBtn:hover {
-  box-shadow: 0 0 30px rgba(254, 243, 199, 0.2);
+  box-shadow: 0 0 30px rgba(180, 180, 200, 0.2);
 }
 
 /* Search */
@@ -124,7 +124,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: var(--space-lg);
+  padding: var(--space-xl);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -215,7 +215,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
   border-bottom: 1px solid var(--border-subtle);
   transition: background var(--transition-fast);
 }
@@ -284,6 +284,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   overflow: hidden;
+  padding: var(--space-lg);
 }
 
 .tableWrap {
@@ -296,7 +297,7 @@
 }
 
 .th {
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
   text-align: left;
   font-size: 10px;
   font-weight: 700;
@@ -330,7 +331,7 @@
 }
 
 .td {
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
   vertical-align: middle;
 }
 
@@ -632,7 +633,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-lg);
   padding: var(--space-3xl);
   text-align: center;
 }
