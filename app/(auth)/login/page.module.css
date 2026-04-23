@@ -154,11 +154,24 @@
 
 .clerkContainer {
   width: 100%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.clerkContainer > :global(*) {
+  width: 100%;
+  max-width: 380px;
+}
+
+.clerkContainer > :global(*) > :global(*) {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-lg), var(--shadow-glow) !important;
+  padding: 32px !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .footer {
