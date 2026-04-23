@@ -140,13 +140,13 @@
 
   /* Spacing */
   --space-xs: 6px;
-  --space-sm: 12px;
+  --space-sm: 10px;
   --space-md: 20px;
-  --space-lg: 28px;
-  --space-xl: 40px;
-  --space-2xl: 56px;
-  --space-3xl: 72px;
-  --space-4xl: 96px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 128px;
 
   /* Radii */
   --radius-sm: 4px;
