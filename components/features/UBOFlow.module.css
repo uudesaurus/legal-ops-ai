@@ -1,0 +1,263 @@
+.flowWrapper {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Idle / Hero View ─────────────────────────────── */
+.idleView {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-3xl) var(--space-3xl) var(--space-4xl);
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-top: var(--space-xl);
+}
+
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.heroAccent {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.heroSubtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* ── How it works ─────────────────────────────── */
+.howItWorks {
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.howSteps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.howStep {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.stepNum {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  padding: var(--space-xs) 4px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stepLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Processing View ─────────────────────────────── */
+.processingView {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+}
+
+/* ── Report View ─────────────────────────────── */
+.reportView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.floatingBar {
+  position: fixed;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(20, 20, 22, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+
+.newAnalysisBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+}
+
+.newAnalysisBtn:hover {
+  background: var(--surface-elevated);
+  border-color: var(--border-hover);
+}
+
+.analysisComplete {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Error View ─────────────────────────────── */
+.errorView {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+}
+
+.errorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  max-width: 400px;
+}
+
+.errorIcon {
+  color: var(--error);
+  opacity: 0.7;
+}
+
+.errorTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.errorDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.errorActions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.retryBtn {
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--text-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-inverse);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.retryBtn:hover {
+  box-shadow: 0 4px 16px rgba(250, 250, 250, 0.12);
+}
+
+.contactBtn {
+  padding: var(--space-sm) var(--space-xl);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 13px;
+  transition: all var(--transition-normal);
+}
+
+.contactBtn:hover {
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .idleView {
+    padding: var(--space-lg);
+    gap: var(--space-xl);
+  }
+
+  .howSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .floatingBar {
+    left: var(--space-md);
+    right: var(--space-md);
+    transform: none;
+  }
+}
